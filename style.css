@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #1E213F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+circle{
+   fill: none;
+   stroke: #F87070;
+   stroke-width: 6px;
+   stroke-linecap: round;
+   stroke-dasharray: 505 ;
+   stroke-dashoffset: 150;
+}
+
+svg{
+    transform: rotate(-90deg);
+    border: 1px solid black;
+}
