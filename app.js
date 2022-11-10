@@ -1,16 +1,43 @@
-const pomo = document.querySelector('circle');
+//Selectors:
+const optionSelect = document.querySelectorAll('.op');
+const cursor = document.querySelector('.cursor');
+const svg = document.querySelector('svg');
+const setting = document.querySelector('.settings');
+const opacity = document.querySelector('#opacity');
 
+//Variables Globales:
+let flag = true;
 
+//Logiques:
+function select(){
+    const el = this.innerText;
 
-function setTime(){
+    if(el == 'short break'){
+        cursor.style.left = '123px';
+    }
 
-    const now = new Date();
+    if(el == 'pomodoro'){
+        cursor.style.left = '10px';
+    }
 
-    const seconds = now.getSeconds();
-    const secondsDegrees = ((seconds/60) * 360);
-
-    console.log(pomo.style.strokeDashoffset = secondsDegrees);
+    if(el == 'long break'){
+        cursor.style.left = '240px';
+    }
 
 }
 
-setInterval(setTime, 1000);
+function modal(){
+    changeFlag();
+    flag ? settings.style.visibility = 'visible' : settings.style.visibility = 'hidden';
+    flag ? opacity.style.visibility = 'visible' : opacity.style.visibility = 'hidden';
+}
+
+function changeFlag(){
+    flag = !flag;
+}
+
+//Events:
+optionSelect.forEach(el => {
+    el.addEventListener('click', select);
+});
+svg.addEventListener('click', modal);
