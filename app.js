@@ -46,6 +46,9 @@ svg.addEventListener('click', modal);
 
 let time = 5;
 
+let minutes = time % 60;
+let seconds = time - minutes *60;
+
 
 setInterval(function(){
     console.log(time);
