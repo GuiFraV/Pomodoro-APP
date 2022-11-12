@@ -41,3 +41,19 @@ optionSelect.forEach(el => {
     el.addEventListener('click', select);
 });
 svg.addEventListener('click', modal);
+
+//Tests:
+
+let time = 5;
+
+
+setInterval(function(){
+    console.log(time);
+
+    if(time > 0){
+
+        time--;
+
+    }
+
+}, 1000);
