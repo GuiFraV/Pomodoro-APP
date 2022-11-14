@@ -21,7 +21,7 @@ function select(){
     }
 
     if(el == 'long break'){
-        cursor.style.left = '240px';
+        cursor.style.left = '242px';
     }
 
 }
@@ -44,19 +44,19 @@ svg.addEventListener('click', modal);
 
 //Tests:
 
-let time = 5;
+// let time = 5;
 
-let minutes = time % 60;
-let seconds = time - minutes *60;
+// let minutes = time % 60;
+// let seconds = time - minutes *60;
 
 
-setInterval(function(){
-    console.log(time);
+// setInterval(function(){
+//     console.log(time);
 
-    if(time > 0){
+//     if(time > 0){
 
-        time--;
+//         time--;
 
-    }
+//     }
 
-}, 1000);
+// }, 1000);

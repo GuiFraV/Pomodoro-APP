@@ -177,3 +177,11 @@ svg{
     background: rgba(10, 12, 28, 0.5);
     visibility: hidden;
 }
+
+.svg{
+    position: absolute;
+    background: white;
+    margin-bottom: 25px;
+    opacity: 0.5;
+    top: 360.2px;
+}
