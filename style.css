@@ -99,10 +99,11 @@ h1{
     height: 339px;
     width: 339px;
     border-radius: 50%;
-    border: 10px solid var(--firstColor);
+    position: relative;
     display: flex;
     justify-content:space-evenly;
     align-items: center;
+    /* border: 10px solid var(--firstColor); */
 }
 
 .time-section{
@@ -180,8 +181,16 @@ svg{
 
 .svg{
     position: absolute;
-    background: white;
-    margin-bottom: 25px;
-    opacity: 0.5;
-    top: 360.2px;
+    top: 0px;
+    transform: rotate(-90deg);
+    /* background: white; */
+    /* opacity: 0.5; */
+    /* visibility: hidden; */
+}
+
+.svg circle{
+    stroke: var(--firstColor);
+    stroke-dasharray: 501;
+    stroke-dashoffset: 250;
+    stroke-linecap: round;
 }

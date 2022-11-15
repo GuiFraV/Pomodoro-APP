@@ -42,21 +42,18 @@ optionSelect.forEach(el => {
 });
 svg.addEventListener('click', modal);
 
-//Tests:
+//Test:
 
-// let time = 5;
+function timer(seconds){
+    const now = Date.now();
 
-// let minutes = time % 60;
-// let seconds = time - minutes *60;
+    const then = now + seconds * 1000;
 
+    setInterval(() => {
 
-// setInterval(function(){
-//     console.log(time);
+        const secondsLeft = (then - Date.now())/1000;
+        console.log(secondsLeft);
 
-//     if(time > 0){
+    },1000);
+}
 
-//         time--;
-
-//     }
-
-// }, 1000);
