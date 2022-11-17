@@ -25,7 +25,6 @@ body{
 .pomo{
     height: 696px;
     width: 410px;
-    /* border: 1px solid white; */
     display: flex;
     justify-content:space-between;
     align-items: center;
@@ -71,7 +70,6 @@ h1{
 .chrono{
     height: 410px;
     width: 410px;
-    /* border: 1px solid red; */
 }
 
 .circle{
@@ -103,7 +101,6 @@ h1{
     display: flex;
     justify-content:space-evenly;
     align-items: center;
-    /* border: 10px solid var(--firstColor); */
 }
 
 .time-section{
@@ -153,6 +150,7 @@ svg{
 .pause{
     cursor: pointer;
     z-index: 999;
+    opacity: 0; /* à mettre à 1 */
 }
 
 .pause:hover{
@@ -171,7 +169,7 @@ svg{
     background: white;
     border-radius: 25px;
     z-index: 999;
-    visibility: hidden;
+    visibility: visible; /* a mettre en hidden*/
 }
 
 .opacity{
@@ -187,13 +185,93 @@ svg{
     visibility: hidden;
 }
 
+.set{
+    cursor: pointer;
+}
+
+.head{
+    height: 93px;
+    border-bottom: 1px solid #E3E1E1;
+    display: flex;
+    justify-content: space-around;
+    gap: 250px;
+    align-items: center;
+}
+
+.head p {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 35px;
+    color: var(--optionColor);
+}
+
+.close{
+    cursor: pointer;
+}
+
+.align{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.align div p{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 16px;
+    letter-spacing: 5px;
+    color: var(--optionColor);
+}
+
+.option-time{
+    height: 157px;
+    width: 460px;
+    border-bottom: 1px solid #E3E1E1;
+}
+
+.font {
+    border-bottom: 1px solid #E3E1E1;
+    width: 460px;
+    height: 88px;
+    display: flex;
+    align-items: center;
+}
+
+.color{
+    width: 460px;
+    height: 96px;
+    display: flex;
+    align-items: center;
+}
+
+.apply{
+    cursor: pointer;
+    background: var(--firstColor);
+    height: 53px;
+    width: 140px;
+    border-radius: 26.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.apply h3 {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+/* Circle */
+
 .svg{
     position: absolute;
     top: 0px;
     transform: rotate(-90deg);
-    /* background: white; */
-    /* opacity: 0.5; */
-    /* visibility: hidden; */
 }
 
 .svg circle{
@@ -201,5 +279,5 @@ svg{
     stroke-dasharray: 501;
     stroke-dashoffset: 250;
     stroke-linecap: round;
-    opacity: 1;
+    opacity: 0; /* à mettre à 1 */
 }

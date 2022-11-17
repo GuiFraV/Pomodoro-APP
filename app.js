@@ -35,6 +35,7 @@ function modal(){
     flag ? settings.style.visibility = 'visible' : settings.style.visibility = 'hidden';
     flag ? opacity.style.visibility = 'visible' : opacity.style.visibility = 'hidden';
     flag ? circle.style.opacity = '0' : circle.style.opacity = '1';
+    flag ? start.style.opacity = '0' : start.style.opacity = '1';
 }
 
 function changeFlag(){
@@ -50,8 +51,6 @@ function startTimer(){
         start.innerHTML = 'START';
         
         clearInterval(countdown);
-
-        
         
     }else{
         
