@@ -147,9 +147,17 @@ h1{
 }
 
 svg{
+    z-index: 999;
+}
+
+.pause{
     cursor: pointer;
     z-index: 999;
+}
 
+.pause:hover{
+    color: var(--firstColor);
+    transition: all 0.5s;
 }
 
 /* Settings */
@@ -193,4 +201,5 @@ svg{
     stroke-dasharray: 501;
     stroke-dashoffset: 250;
     stroke-linecap: round;
+    opacity: 1;
 }
