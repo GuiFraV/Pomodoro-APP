@@ -7,6 +7,10 @@ const opacity = document.querySelector('#opacity');
 const circle = document.querySelector('circle');
 const timerDisplay = document.querySelector('.time');
 const start = document.querySelector('.pause');
+const close = document.querySelector('.head img');
+const apply = document.querySelector('.apply');
+const timerPomodoro = document.querySelector('.time span');
+const timerOption = document.querySelector('.pomodoro-op span');
 
 //Variables Globales:
 let flag = true;
@@ -15,19 +19,15 @@ let countdown;
 //Logiques:
 function select(){
     const el = this.innerText;
-
     if(el == 'short break'){
         cursor.style.left = '123px';
     }
-
     if(el == 'pomodoro'){
         cursor.style.left = '10px';
     }
-
     if(el == 'long break'){
         cursor.style.left = '242px';
     }
-
 }
 
 function modal(){
@@ -41,8 +41,6 @@ function modal(){
 function changeFlag(){
     flag = !flag;
 }
-
-
 
 function startTimer(){
 
@@ -74,7 +72,6 @@ function timer(seconds){
     const now = Date.now();
     const then = now + seconds * 1000;
     displayTimeLeft(seconds);
-
     countdown = setInterval(() => {
         const secondsLeft = Math.round((then - Date.now())/1000);
         if(secondsLeft < 0){
@@ -87,13 +84,11 @@ function timer(seconds){
 }
 
 function displayTimeLeft(seconds){
-
     const minutes = Math.floor(seconds / 60);
     const reminderSeconds = seconds % 60;
     const display = `${minutes}:${reminderSeconds < 10 ? '0' : ''}${reminderSeconds}`;
     timerDisplay.textContent = display;
     document.title = display;
-
     console.log({minutes, reminderSeconds} );
 }
 
@@ -103,7 +98,15 @@ optionSelect.forEach(el => {
     el.addEventListener('click', select);
 });
 svg.addEventListener('click', modal);
-
+close.addEventListener('click', modal);
+apply.addEventListener('click', modal);
 start.addEventListener('click', startTimer);
+
+
+// Test Debug:
+document.addEventListener('click', (e) => {
+    console.log(timerPomodoro.innerHTML);
+    console.log(timerOption.innerHTML);
+})
 
 
